@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Management System</title>
+    </head>
+    <body>
+        <h1>Student Management System</h1>
+        <form  action ="/student" method="post">
+            Name:
+            <input type ="text" name="Name" required>
+            <br><br>
+            course:
+            <input type ="text" name="Course"required>
+            <br><br>
+            <input type ="submit" value="Add student">
+    <h1>Student Records</h1>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+        {% for s in student2 %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+        </form>
+</body>
+</html>
+
+    
+    

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Management System</title>
+    </head>
+    <body>
+        <h1>Employee Management System</h1>
+        <form  action ="/employee" method="post">
+            Name:
+            <input type ="text" name="Name" required>
+            <br><br>
+            Department:
+            <input type ="text" name="Department"required>
+            <br><br>
+            <input type ="submit" value="Add employee">
+    <h1>Employee Records</h1>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+
+        {% for s in Employee %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+     
+        </form>
+</body>
+</html>
+
+    
+    
